@@ -10,9 +10,5 @@ def clean_data(df):
     df = df.fillna(0)
     return df
 
-#returns cleaned format of the dataframe, taking out any columns with no data
-def compare_user(input):
-    return
-
 user_df = clean_data(df)
 print(user_df)
