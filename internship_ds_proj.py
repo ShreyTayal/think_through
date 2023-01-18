@@ -10,7 +10,7 @@ def clean_data(df):
     df = df.fillna(0)
     return df
 
-#compares the user rating to the averages
+#returns cleaned format of the dataframe, taking out any columns with no data
 def compare_user(input):
     return
 
