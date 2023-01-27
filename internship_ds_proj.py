@@ -21,7 +21,7 @@ def clean_data(df):
 
 user_df = clean_data(df)
 
-#testing the creation of the y-coordinate of the political quadrant using two of the questions
+#testing the creation of the y-coordinate averages of each user of the political quadrant using two of the questions
 def create_y(df):
     y = df.loc[:, ['Police Brutality', 'Free Market']]
     y["Averages"] = [np.mean(a=y.loc[item, :]) for item in y.index]
