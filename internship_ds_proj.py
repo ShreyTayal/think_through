@@ -37,7 +37,7 @@ def create_x(df):
 
 x = create_x(df)
 y = create_y(df)
-#add to the main dataframe, drop duplicate collumns
+#add acis to the to the main dataframe
 new_df = pd.concat([x, y], axis=1)
 
 # iterate over the rows of the DataFrame, and return coordinates
@@ -45,6 +45,9 @@ for index, row in new_df.iterrows():
     xval = row["X Averages"]
     yval = row["Y Averages"]
     print((xval,yval))
+    
+    
+
 
 
 
