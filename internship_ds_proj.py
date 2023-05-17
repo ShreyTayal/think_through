@@ -9,11 +9,11 @@ df = pd.read_excel('/Users/akshatchavan/Library/Containers/com.microsoft.Excel/D
 def clean_data(df):
     df = df.dropna(axis=1, how='all')
 
-    # make the phone numbers the index collumn and remove duplicate IDs
+    # make the phone numbers the index column and remove duplicate IDs
     df = df.set_index("UserID (Phone Number)")
     df.index.drop_duplicates()
 
-    # delete old average row and add an dynamic average row at the end of all the numbers
+    # delete old average row and add a dynamic average row at the end of all the numbers
     df = df.drop(df.index[-1])
     df.loc["Avg"] = np.nan
     df.loc["Avg"] = df.mean(numeric_only=True, axis=0)
